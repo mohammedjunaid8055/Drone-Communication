@@ -1,8 +1,16 @@
 import rclpy
 from rclpy.node import Node
+
+from rclpy.qos import QoSProfile
+from rclpy.qos import ReliabilityPolicy
+from rclpy.qos import DurabilityPolicy
+from rclpy.qos import HistoryPolicy
+
 from px4_msgs.msg import VehicleLocalPosition
+
 import csv
 import os
+
 
 class SwarmLogger(Node):
 
@@ -22,19 +30,34 @@ class SwarmLogger(Node):
                     'z',
                     'vx',
                     'vy',
-                    'vz'
+                    'vz',
+                    'ax',
+                    'ay',
+                    'az',
+                    'heading'
                 ])
+
+        qos_profile = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=DurabilityPolicy.TRANSIENT_LOCAL,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1
+        )
+
+        self.subscribers = []
 
         for i in range(1, 9):
 
             topic = f'/px4_{i}/fmu/out/vehicle_local_position_v1'
 
-            self.create_subscription(
+            sub = self.create_subscription(
                 VehicleLocalPosition,
                 topic,
                 lambda msg, drone=i: self.position_callback(msg, drone),
-                10
+                qos_profile
             )
+
+            self.subscribers.append(sub)
 
             self.get_logger().info(
                 f'Subscribed to {topic}'
@@ -54,7 +77,11 @@ class SwarmLogger(Node):
                 msg.z,
                 msg.vx,
                 msg.vy,
-                msg.vz
+                msg.vz,
+                msg.ax,
+                msg.ay,
+                msg.az,
+                msg.heading
             ])
 
 

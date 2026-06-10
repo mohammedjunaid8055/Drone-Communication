@@ -1,0 +1,27 @@
+[0.722s] Invoking command in '/home/intern/px4_ros_com_ws/src/swarm_controller/swarm_controller_pkg': PYTHONPATH=/home/intern/px4_ros_com_ws/build/swarm_controller_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/swarm_controller_pkg build --build-base /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build install --record /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/install.log --install-scripts $base/lib/swarm_controller_pkg --single-version-externally-managed install_data
+[0.975s] running egg_info
+[0.975s] writing ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/PKG-INFO
+[0.975s] writing dependency_links to ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/dependency_links.txt
+[0.975s] writing entry points to ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/entry_points.txt
+[0.975s] writing requirements to ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/requires.txt
+[0.975s] writing top-level names to ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/top_level.txt
+[1.019s] reading manifest file '../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/SOURCES.txt'
+[1.020s] writing manifest file '../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/SOURCES.txt'
+[1.021s] running build
+[1.021s] running build_py
+[1.021s] copying swarm_controller_pkg/swarm_logger.py -> /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg
+[1.021s] running install
+[1.022s] running install_lib
+[1.023s] copying /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg/swarm_logger.py -> /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg
+[1.023s] byte-compiling /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg/swarm_logger.py to swarm_logger.cpython-38.pyc
+[1.025s] running install_data
+[1.025s] running install_egg_info
+[1.027s] removing '/home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg-0.0.0-py3.8.egg-info' (and everything under it)
+[1.027s] Copying ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info to /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg-0.0.0-py3.8.egg-info
+[1.028s] running install_scripts
+[1.045s] Installing formation_controller script to /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/swarm_controller_pkg
+[1.045s] Installing leader_listener script to /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/swarm_controller_pkg
+[1.045s] Installing offboard_takeoff script to /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/swarm_controller_pkg
+[1.046s] Installing swarm_logger script to /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/swarm_controller_pkg
+[1.046s] writing list of installed files to '/home/intern/px4_ros_com_ws/build/swarm_controller_pkg/install.log'
+[1.069s] Invoked command in '/home/intern/px4_ros_com_ws/src/swarm_controller/swarm_controller_pkg' returned '0': PYTHONPATH=/home/intern/px4_ros_com_ws/build/swarm_controller_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/swarm_controller_pkg build --build-base /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build install --record /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/install.log --install-scripts $base/lib/swarm_controller_pkg --single-version-externally-managed install_data
