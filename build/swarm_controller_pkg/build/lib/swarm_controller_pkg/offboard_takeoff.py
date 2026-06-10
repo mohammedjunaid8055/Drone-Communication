@@ -1,0 +1,116 @@
+import math
+import rclpy
+from rclpy.node import Node
+
+from px4_msgs.msg import OffboardControlMode
+from px4_msgs.msg import TrajectorySetpoint
+from px4_msgs.msg import VehicleCommand
+
+
+class OffboardTakeoff(Node):
+
+    def __init__(self):
+        super().__init__('offboard_takeoff')
+
+        self.offboard_pub = self.create_publisher(
+            OffboardControlMode,
+            '/px4_1/fmu/in/offboard_control_mode',
+            10
+        )
+
+        self.setpoint_pub = self.create_publisher(
+            TrajectorySetpoint,
+            '/px4_1/fmu/in/trajectory_setpoint',
+            10
+        )
+
+        self.command_pub = self.create_publisher(
+            VehicleCommand,
+            '/px4_1/fmu/in/vehicle_command',
+            10
+        )
+
+        self.counter = 0
+        self.leader_x = 0.0
+
+        self.timer = self.create_timer(
+            0.1,
+            self.timer_callback
+        )
+
+    def arm(self):
+
+        msg = VehicleCommand()
+
+        msg.command = VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM
+        msg.param1 = 1.0
+
+        msg.target_system = 2
+        msg.target_component = 1
+
+        self.command_pub.publish(msg)
+
+        self.get_logger().info("ARM command sent")
+
+    def set_offboard_mode(self):
+
+        msg = VehicleCommand()
+
+        msg.command = VehicleCommand.VEHICLE_CMD_DO_SET_MODE
+        msg.param1 = 1.0
+        msg.param2 = 6.0
+
+        msg.target_system = 2
+        msg.target_component = 1
+
+        self.command_pub.publish(msg)
+
+        self.get_logger().info("OFFBOARD mode command sent")
+
+    def timer_callback(self):
+
+        offboard_msg = OffboardControlMode()
+        offboard_msg.position = True
+
+        self.offboard_pub.publish(offboard_msg)
+
+        if self.counter > 100:
+            self.leader_x += 0.02
+
+        t = self.counter * 0.05
+
+        x = 5.0 * math.sin(t)
+        y = 2.5 * math.sin(2 * t)
+
+        traj_msg = TrajectorySetpoint()
+        traj_msg.position = [
+            x,
+            y,
+            -3.0
+        ]
+        traj_msg.yaw = 0.0
+
+        self.setpoint_pub.publish(traj_msg)
+
+        self.counter += 1
+
+        if self.counter == 20:
+            self.set_offboard_mode()
+            self.arm()
+
+
+def main(args=None):
+
+    rclpy.init(args=args)
+
+    node = OffboardTakeoff()
+
+    rclpy.spin(node)
+
+    node.destroy_node()
+
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

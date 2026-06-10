@@ -1,0 +1,55 @@
+[0.720s] Invoking command in '/home/intern/px4_ros_com_ws/src/swarm_controller/swarm_controller_pkg': PYTHONPATH=/home/intern/px4_ros_com_ws/build/swarm_controller_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/swarm_controller_pkg build --build-base /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build install --record /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/install.log --install-scripts $base/lib/swarm_controller_pkg --single-version-externally-managed install_data
+[0.980s] running egg_info
+[0.980s] creating ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info
+[0.981s] writing ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/PKG-INFO
+[0.981s] writing dependency_links to ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/dependency_links.txt
+[0.981s] writing entry points to ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/entry_points.txt
+[0.981s] writing requirements to ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/requires.txt
+[0.981s] writing top-level names to ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/top_level.txt
+[0.982s] writing manifest file '../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/SOURCES.txt'
+[1.019s] reading manifest file '../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/SOURCES.txt'
+[1.020s] writing manifest file '../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info/SOURCES.txt'
+[1.020s] running build
+[1.020s] running build_py
+[1.020s] creating /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build
+[1.020s] creating /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib
+[1.020s] creating /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg
+[1.020s] copying swarm_controller_pkg/swarm_logger.py -> /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg
+[1.020s] copying swarm_controller_pkg/formation_controller.py -> /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg
+[1.021s] copying swarm_controller_pkg/setup.py -> /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg
+[1.021s] copying swarm_controller_pkg/leader_listener.py -> /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg
+[1.021s] copying swarm_controller_pkg/__init__.py -> /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg
+[1.021s] copying swarm_controller_pkg/offboard_takeoff.py -> /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg
+[1.021s] copying swarm_controller_pkg/follower_controller.py -> /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg
+[1.022s] running install
+[1.022s] running install_lib
+[1.023s] creating /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg
+[1.023s] copying /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg/swarm_logger.py -> /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg
+[1.023s] copying /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg/formation_controller.py -> /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg
+[1.023s] copying /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg/setup.py -> /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg
+[1.024s] copying /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg/leader_listener.py -> /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg
+[1.024s] copying /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg/__init__.py -> /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg
+[1.024s] copying /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg/offboard_takeoff.py -> /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg
+[1.024s] copying /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build/lib/swarm_controller_pkg/follower_controller.py -> /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg
+[1.024s] byte-compiling /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg/swarm_logger.py to swarm_logger.cpython-38.pyc
+[1.026s] byte-compiling /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg/formation_controller.py to formation_controller.cpython-38.pyc
+[1.027s] byte-compiling /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg/setup.py to setup.cpython-38.pyc
+[1.027s] byte-compiling /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg/leader_listener.py to leader_listener.cpython-38.pyc
+[1.027s] byte-compiling /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg/__init__.py to __init__.cpython-38.pyc
+[1.028s] byte-compiling /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg/offboard_takeoff.py to offboard_takeoff.cpython-38.pyc
+[1.028s] byte-compiling /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg/follower_controller.py to follower_controller.cpython-38.pyc
+[1.028s] running install_data
+[1.028s] creating /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/share/ament_index
+[1.029s] creating /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/share/ament_index/resource_index
+[1.029s] creating /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/share/ament_index/resource_index/packages
+[1.029s] copying resource/swarm_controller_pkg -> /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/share/ament_index/resource_index/packages
+[1.029s] copying package.xml -> /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/share/swarm_controller_pkg
+[1.029s] running install_egg_info
+[1.031s] Copying ../../../build/swarm_controller_pkg/swarm_controller_pkg.egg-info to /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages/swarm_controller_pkg-0.0.0-py3.8.egg-info
+[1.032s] running install_scripts
+[1.051s] Installing formation_controller script to /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/swarm_controller_pkg
+[1.051s] Installing leader_listener script to /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/swarm_controller_pkg
+[1.052s] Installing offboard_takeoff script to /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/swarm_controller_pkg
+[1.052s] Installing swarm_logger script to /home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/swarm_controller_pkg
+[1.052s] writing list of installed files to '/home/intern/px4_ros_com_ws/build/swarm_controller_pkg/install.log'
+[1.078s] Invoked command in '/home/intern/px4_ros_com_ws/src/swarm_controller/swarm_controller_pkg' returned '0': PYTHONPATH=/home/intern/px4_ros_com_ws/build/swarm_controller_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/intern/px4_ros_com_ws/install/swarm_controller_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/swarm_controller_pkg build --build-base /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/build install --record /home/intern/px4_ros_com_ws/build/swarm_controller_pkg/install.log --install-scripts $base/lib/swarm_controller_pkg --single-version-externally-managed install_data

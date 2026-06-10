@@ -1,0 +1,6 @@
+[console_scripts]
+formation_controller = swarm_controller_pkg.formation_controller:main
+leader_listener = swarm_controller_pkg.leader_listener:main
+offboard_takeoff = swarm_controller_pkg.offboard_takeoff:main
+swarm_logger = swarm_controller_pkg.swarm_logger:main
+
